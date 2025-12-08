@@ -30,7 +30,12 @@ public class Inventory : MonoBehaviour
         if (nextInput && !hasSwitched)
         {
             ballIndex = (ballIndex + 1) % ballprefabs.Length;
-            carryBallScript.CarryBall(ballprefabs[ballIndex]);
+            GameObject carriedBall;
+            if (numberOfBalls > 0)
+            {
+                carriedBall = Instantiate(ballprefabs[ballIndex]);
+                carryBallScript.CarryBall(carriedBall);
+            }
         }
         if (previousInput && !hasSwitched)
         {
@@ -39,7 +44,12 @@ public class Inventory : MonoBehaviour
             {
                 ballIndex = ballprefabs.Length - 1;
             }
-            carryBallScript.CarryBall(ballprefabs[ballIndex]);
+            GameObject carriedBall;
+            if (numberOfBalls > 0)
+            {
+                carriedBall = Instantiate(ballprefabs[ballIndex]);
+                carryBallScript.CarryBall(carriedBall);
+            }
         }
         if (nextInput || previousInput)
         {
