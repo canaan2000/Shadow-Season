@@ -73,6 +73,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("ball1"))
+        {
+            numberOfBalls++;
+            Destroy(other.gameObject.transform.parent.gameObject);
+        }
+    }
+
     private void Awake()
     {
         inputActions = new InputSystem_Actions();
