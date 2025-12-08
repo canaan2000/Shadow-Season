@@ -518,6 +518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 1669348709964687846, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1807558301498001365, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9
@@ -556,6 +560,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807558301498001365, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831561699137053037, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

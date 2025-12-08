@@ -24,7 +24,7 @@ public class CarryBallScript : MonoBehaviour
     {
         ChangeBall();
 
-        if (ball != null && inventory.numberOfBalls > 0)
+        if (ball != null)
         {
             ball.transform.parent = carryPoint;
             ball.transform.position = carryPoint.position;
