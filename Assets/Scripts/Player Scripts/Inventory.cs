@@ -30,6 +30,7 @@ public class Inventory : MonoBehaviour
         if (nextInput && !hasSwitched)
         {
             ballIndex = (ballIndex + 1) % ballprefabs.Length;
+            carryBallScript.CarryBall(ballprefabs[ballIndex]);
         }
         if (previousInput && !hasSwitched)
         {
@@ -38,6 +39,7 @@ public class Inventory : MonoBehaviour
             {
                 ballIndex = ballprefabs.Length - 1;
             }
+            carryBallScript.CarryBall(ballprefabs[ballIndex]);
         }
         if (nextInput || previousInput)
         {
