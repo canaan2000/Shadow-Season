@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.22069734, z: -0, w: 0.97534233}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7493722462679201339}
@@ -254,8 +254,8 @@ GameObject:
   - component: {fileID: 4671467036163027078}
   - component: {fileID: -6122222802836942818}
   m_Layer: 0
-  m_Name: ball
-  m_TagString: ball1
+  m_Name: Green Ball
+  m_TagString: Green Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1

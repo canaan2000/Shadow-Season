@@ -31,6 +31,18 @@ public class CarryBallScript : MonoBehaviour
             ball.transform.rotation = carryPoint.rotation;
             ball.GetComponent<Rigidbody>().isKinematic = true;
             ball.GetComponent<Collider>().enabled = false;
+            switch (ball.tag)
+            {
+                case "Green Ball":
+                    inventory.ballIndex = 0;
+                    break;
+                case "Red Ball":
+                    inventory.ballIndex = 1;
+                    break;
+                case "Blue Ball":
+                    inventory.ballIndex = 2;
+                    break;
+            }
         }
     }
 

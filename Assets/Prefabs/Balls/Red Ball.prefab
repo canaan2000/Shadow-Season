@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.06279052, z: -0, w: 0.9980268}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7493722462679201339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -253,8 +253,8 @@ GameObject:
   - component: {fileID: 7150481908586914564}
   - component: {fileID: 4671467036163027078}
   m_Layer: 0
-  m_Name: ball 1
-  m_TagString: ball1
+  m_Name: Red Ball
+  m_TagString: Red Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1

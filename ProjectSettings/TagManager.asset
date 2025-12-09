@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - ball1
+  - Pedestal
+  - Blue Ball
+  - Red Ball
+  - Green Ball
   layers:
   - Default
   - TransparentFX

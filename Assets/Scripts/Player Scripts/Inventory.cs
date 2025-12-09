@@ -63,22 +63,13 @@ public class Inventory : MonoBehaviour
 
         currentBall = ballprefabs[ballIndex];
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("ball1"))
-        {
-            numberOfBalls++;
-            Destroy(collision.gameObject);
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("ball1"))
         {
+            carryBallScript.CarryBall(other.gameObject.transform.parent.gameObject);
+
             numberOfBalls++;
-            Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
 
