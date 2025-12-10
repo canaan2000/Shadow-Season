@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
         if (movementInput != Vector2.zero)
         {
             Vector3 moveDirection = transform.forward * movementInput.y + transform.right * movementInput.x;
-            characterController.Move(moveDirection * Time.deltaTime * speed);
+            Vector3 gravity = Vector3.up * -9.81f;
+            characterController.Move(moveDirection * Time.deltaTime * speed + gravity);
         }
 
         var lookInput = inputActions.Player.Look.ReadValue<Vector2>();

@@ -43,6 +43,8 @@ public class CarryBallScript : MonoBehaviour
                     inventory.ballIndex = 2;
                     break;
             }
+
+            inventory.currentBall = ball;
         }
     }
 

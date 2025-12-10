@@ -40,7 +40,7 @@ public class InteractScript : MonoBehaviour
                 {
                     case "Pedestal":
                         PedistalScript pedistal = hit.collider.gameObject.GetComponent<PedistalScript>();
-                        if (inventory.currentBall != null && !pedistal.isActivated)
+                        if (inventory.currentBall != null && pedistal.placedBall == null)
                         {
                             GameObject newBall = Instantiate(inventory.currentBall);
                             pedistal.placedBall = newBall;
@@ -50,7 +50,9 @@ public class InteractScript : MonoBehaviour
                     case "ball1":
                         inventory.numberOfBalls++;
 
-                        carryBallScript.CarryBall(hit.collider.gameObject.transform.parent.gameObject);
+                        GameObject newBall2 = Instantiate(hit.collider.gameObject.transform.parent.gameObject);
+
+                        carryBallScript.CarryBall(newBall2);
 
                         Destroy(hit.collider.gameObject.transform.parent.gameObject);
 
