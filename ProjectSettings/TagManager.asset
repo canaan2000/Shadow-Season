@@ -9,6 +9,7 @@ TagManager:
   - Blue Ball
   - Red Ball
   - Green Ball
+  - Patrol Point
   layers:
   - Default
   - TransparentFX

@@ -40,9 +40,12 @@ public class PedistalScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Green Ball") || collision.gameObject.CompareTag("Red Ball") || collision.gameObject.CompareTag("Blue Ball") && placedBall == null)
+        if (collision.gameObject.CompareTag("Green Ball") || collision.gameObject.CompareTag("Red Ball") || collision.gameObject.CompareTag("Blue Ball"))
         {
-            placedBall = collision.gameObject;
+            if (placedBall == null)
+            {
+                placedBall = collision.gameObject;
+            }
         }
     }
 }
