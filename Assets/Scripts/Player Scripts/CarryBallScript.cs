@@ -14,7 +14,18 @@ public class CarryBallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inventory.numberOfBalls <= 0)
+        GameObject matchingPrefab = null;
+
+        foreach (GameObject ball in inventory.ballprefabs)
+        {
+            if (inventory.currentBall != null && inventory.currentBall.name.Contains(ball.name))
+            {
+                matchingPrefab = ball;
+                break;
+            }
+        }
+
+        if (inventory.ballInventory[matchingPrefab] <= 0)
         {
             ChangeBall();
         }

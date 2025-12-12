@@ -24,11 +24,23 @@ public class ThrowingScript : MonoBehaviour
     {
         var throwInput = inputActions.Player.Throw.ReadValue<float>() > 0;
 
-        if (throwInput && !hasThrown && inventory.numberOfBalls > 0)
+        GameObject matchingPrefab = null;
+
+        foreach (GameObject ball in inventory.ballprefabs)
         {
-            GameObject newBall = Instantiate(inventory.currentBall, transform.position + playerController.playerCamera.transform.forward * 3, Quaternion.identity);
+            if (inventory.currentBall != null && inventory.currentBall.name.Contains(ball.name))
+            {
+                matchingPrefab = ball;
+                break;
+            }
+        }
+
+        if (throwInput && !hasThrown && inventory.ballInventory[matchingPrefab] > 0)
+        {
+            GameObject newBall = Instantiate(matchingPrefab, transform.position + playerController.playerCamera.transform.forward * 3, Quaternion.identity);
             newBall.GetComponent<Rigidbody>().AddForce(playerController.playerCamera.transform.forward * throwSpeed);
             inventory.numberOfBalls--;
+            inventory.ballInventory[matchingPrefab]--;
             hasThrown = true;
         }
         if (!throwInput && hasThrown)

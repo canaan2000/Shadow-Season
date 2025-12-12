@@ -10,6 +10,7 @@ TagManager:
   - Red Ball
   - Green Ball
   - Patrol Point
+  - Safe Zone
   layers:
   - Default
   - TransparentFX

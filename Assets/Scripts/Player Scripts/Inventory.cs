@@ -10,6 +10,8 @@ public class Inventory : MonoBehaviour
     public int numberOfBalls = 0;
     public GameObject[] ballprefabs;
 
+    public Dictionary<GameObject, int> ballInventory = new Dictionary<GameObject, int>();
+
     public GameObject currentBall;
 
     bool hasSwitched = false;
@@ -19,6 +21,16 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         carryBallScript = GetComponent<CarryBallScript>();
+
+        foreach (GameObject ball in ballprefabs)
+        {
+            ballInventory.Add(ball, 0);
+        }
+
+        if (ballprefabs.Length > 0)
+        {
+            currentBall = GetAvailableBalls()[ballIndex];
+        }
     }
 
     // Update is called once per frame
@@ -33,7 +45,7 @@ public class Inventory : MonoBehaviour
             GameObject carriedBall;
             if (numberOfBalls > 0)
             {
-                carriedBall = Instantiate(ballprefabs[ballIndex]);
+                carriedBall = Instantiate(GetAvailableBalls()[ballIndex]);
                 carryBallScript.CarryBall(carriedBall);
             }
         }
@@ -47,7 +59,7 @@ public class Inventory : MonoBehaviour
             GameObject carriedBall;
             if (numberOfBalls > 0)
             {
-                carriedBall = Instantiate(ballprefabs[ballIndex]);
+                carriedBall = Instantiate(GetAvailableBalls()[ballIndex]);
                 carryBallScript.CarryBall(carriedBall);
             }
         }
@@ -61,16 +73,52 @@ public class Inventory : MonoBehaviour
             hasSwitched = false;
         }
 
-        currentBall = ballprefabs[ballIndex];
+        currentBall = GetAvailableBalls()[ballIndex];
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.GetComponent<SafeZoneScript>() != null)
+        {
+            return;
+        }
+
         if (other.gameObject.CompareTag("ball1"))
         {
-            carryBallScript.CarryBall(other.gameObject.transform.parent.gameObject);
+            GameObject newBall = Instantiate(other.gameObject.transform.parent.gameObject);
+
+            GameObject matchingPrefab = null;
+
+            foreach (GameObject ball in ballprefabs)
+            {
+                if (newBall.name.Contains(ball.name))
+                {
+                    matchingPrefab = ball;
+                    break;
+                }
+            }
+
+            carryBallScript.CarryBall(newBall);
 
             numberOfBalls++;
+
+            ballInventory[matchingPrefab]++;
+
+            Destroy(other.gameObject.transform.parent.gameObject);
+            Debug.Log("Balls in inventory: " + numberOfBalls);
         }
+    }
+
+    List<GameObject> GetAvailableBalls()
+    {
+        List<GameObject> availableBalls = new List<GameObject>();
+        foreach (var ballType in ballInventory)
+        {
+            if (ballType.Value > 0)
+            {
+                availableBalls.Add(ballType.Key);
+            }
+        }
+        return availableBalls;
     }
 
     private void Awake()

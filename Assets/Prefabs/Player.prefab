@@ -17,8 +17,10 @@ GameObject:
   - component: {fileID: 1723957218372107819}
   - component: {fileID: 8416192351540418404}
   - component: {fileID: 1712471575058180382}
+  - component: {fileID: 688624590237561577}
+  - component: {fileID: 3390863764964979440}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,6 +209,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarryBallScript
   carryPoint: {fileID: 6375201800144569701}
+--- !u!114 &688624590237561577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669348709964687846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf71daf7c58ddc4a902e87122253bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractScript
+--- !u!114 &3390863764964979440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669348709964687846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794b45dd67f3c054bb6500f956f07db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDarknessCounter
+  darkTillDeath: 15
+  currentDark: 0
 --- !u!1 &2358804099423518350
 GameObject:
   m_ObjectHideFlags: 0

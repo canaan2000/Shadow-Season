@@ -36,8 +36,12 @@ public class MonsterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRange);
+        if (!playerDetected && agent.remainingDistance < 0.5f)
+        {
+            Patrol();
+        }
 
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRange);
 
         foreach (var hitCollider in hitColliders)
         {
@@ -90,5 +94,14 @@ public class MonsterScript : MonoBehaviour
                 agent.SetDestination(patrolPoints[currentPatrolIndex].position);
             }
         }
+    }
+
+    void Patrol()
+    {
+        if (patrolPoints.Length == 0) return;
+
+        currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+
+        agent.SetDestination(patrolPoints[currentPatrolIndex].position);
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 moveDirection = transform.forward * movementInput.y + transform.right * movementInput.x;
             Vector3 gravity = Vector3.up * -9.81f;
-            characterController.Move(moveDirection * Time.deltaTime * speed + gravity);
+            characterController.Move(moveDirection * Time.deltaTime * speed + gravity * Time.deltaTime);
         }
 
         var lookInput = inputActions.Player.Look.ReadValue<Vector2>();
@@ -42,6 +43,18 @@ public class PlayerController : MonoBehaviour
 
             playerCamera.transform.localEulerAngles = new Vector3(cameraPitch, 0f, 0f);
         }
+
+        var reloadInput = inputActions.Player.Reload.ReadValue<float>() > 0;
+
+        if (reloadInput)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void Awake()
@@ -49,7 +62,7 @@ public class PlayerController : MonoBehaviour
         inputActions = new InputSystem_Actions();
         inputActions.Player.Move.Enable();
         inputActions.Player.Look.Enable();
-
+        inputActions.Player.Reload.Enable();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -57,5 +70,6 @@ public class PlayerController : MonoBehaviour
     {
         inputActions.Player.Move.Disable();
         inputActions.Player.Look.Disable();
+        inputActions.Player.Reload.Disable();
     }
 }
