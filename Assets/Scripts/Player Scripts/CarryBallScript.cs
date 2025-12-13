@@ -25,9 +25,12 @@ public class CarryBallScript : MonoBehaviour
             }
         }
 
-        if (inventory.ballInventory[matchingPrefab.tag] <= 0)
+        if (inventory.currentBall != null)
         {
-            ChangeBall();
+            if (inventory.ballInventory[matchingPrefab.tag] <= 0)
+            {
+                ChangeBall();
+            }
         }
     }
 
@@ -53,6 +56,7 @@ public class CarryBallScript : MonoBehaviour
         {
             return;
         }
+        inventory.currentBall = null;
         GameObject carriedBall = carryPoint.GetChild(0).gameObject;
         Destroy(carriedBall);
     }

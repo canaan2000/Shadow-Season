@@ -46,6 +46,8 @@ public class InteractScript : MonoBehaviour
 
                             GameObject newBall = Instantiate(inventory.currentBall);
                             pedistal.placedBall = newBall;
+
+                            Debug.Log(newBall.tag + "s in inventory: " + inventory.ballInventory[newBall.tag]);
                         }
                         break;
                     case "ball1":
@@ -53,11 +55,15 @@ public class InteractScript : MonoBehaviour
 
                         GameObject newBall2 = Instantiate(hit.collider.gameObject.transform.parent.gameObject);
 
-                        inventory.ballIndex = inventory.ballPrefabs.FindIndex(b => b.tag == hit.collider.gameObject.transform.parent.gameObject.tag);
+                        inventory.ballIndex = inventory.ballPrefabs.FindIndex(b => b.tag == newBall2.tag);
+
+                        inventory.currentBall = inventory.ballPrefabs[inventory.ballIndex];
 
                         carryBallScript.CarryBall(newBall2);
 
                         Destroy(hit.collider.gameObject.transform.parent.gameObject);
+
+                        Debug.Log(newBall2.tag + "s in inventory: " + inventory.ballInventory[newBall2.tag]);
 
                         break;
                 }

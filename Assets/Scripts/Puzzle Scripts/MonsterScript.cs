@@ -3,6 +3,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class MonsterScript : MonoBehaviour
 {
@@ -70,6 +71,14 @@ public class MonsterScript : MonoBehaviour
         {
             StartCoroutine(Stun());
             Destroy(other.gameObject.transform.parent.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
