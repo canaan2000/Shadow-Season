@@ -42,6 +42,8 @@ public class InteractScript : MonoBehaviour
                         PedistalScript pedistal = hit.collider.gameObject.GetComponent<PedistalScript>();
                         if (inventory.currentBall != null && pedistal.placedBall == null)
                         {
+                            inventory.ballInventory[inventory.currentBall.tag]--;
+
                             GameObject newBall = Instantiate(inventory.currentBall);
                             pedistal.placedBall = newBall;
                         }
