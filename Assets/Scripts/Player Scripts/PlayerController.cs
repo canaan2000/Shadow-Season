@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
     InputSystem_Actions inputActions;
     public CharacterController characterController;
 
-    Inventory playerInventory;
-
     public Camera playerCamera;
 
     public float speed = 5f;

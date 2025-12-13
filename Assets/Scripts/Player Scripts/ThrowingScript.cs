@@ -4,7 +4,7 @@ public class ThrowingScript : MonoBehaviour
 {
     InputSystem_Actions inputActions;
 
-    Inventory inventory;
+    InventoryNew inventory;
     PlayerController playerController;
 
 
@@ -15,7 +15,7 @@ public class ThrowingScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventory = GetComponent<Inventory>();
+        inventory = GetComponent<InventoryNew>();
         playerController = GetComponent<PlayerController>();
     }
 
@@ -26,7 +26,7 @@ public class ThrowingScript : MonoBehaviour
 
         GameObject matchingPrefab = null;
 
-        foreach (GameObject ball in inventory.ballprefabs)
+        foreach (GameObject ball in inventory.ballPrefabs)
         {
             if (inventory.currentBall != null && inventory.currentBall.name.Contains(ball.name))
             {
@@ -35,12 +35,11 @@ public class ThrowingScript : MonoBehaviour
             }
         }
 
-        if (throwInput && !hasThrown && inventory.ballInventory[matchingPrefab] > 0)
+        if (throwInput && !hasThrown && inventory.ballInventory[matchingPrefab.tag] > 0)
         {
             GameObject newBall = Instantiate(matchingPrefab, transform.position + playerController.playerCamera.transform.forward * 3, Quaternion.identity);
             newBall.GetComponent<Rigidbody>().AddForce(playerController.playerCamera.transform.forward * throwSpeed);
-            inventory.numberOfBalls--;
-            inventory.ballInventory[matchingPrefab]--;
+            inventory.ballInventory[matchingPrefab.tag]--;
             hasThrown = true;
         }
         if (!throwInput && hasThrown)

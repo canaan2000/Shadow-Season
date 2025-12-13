@@ -3,7 +3,7 @@ using UnityEngine;
 public class InteractScript : MonoBehaviour
 {
     InputSystem_Actions inputActions;
-    Inventory inventory;
+    InventoryNew inventory;
     PlayerController playerController;
     CarryBallScript carryBallScript;
     Camera playerCam;
@@ -13,7 +13,7 @@ public class InteractScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventory = GetComponent<Inventory>();
+        inventory = GetComponent<InventoryNew>();
         playerController = GetComponent<PlayerController>();
         carryBallScript = GetComponent<CarryBallScript>();
 
@@ -44,13 +44,14 @@ public class InteractScript : MonoBehaviour
                         {
                             GameObject newBall = Instantiate(inventory.currentBall);
                             pedistal.placedBall = newBall;
-                            inventory.numberOfBalls--;
                         }
                         break;
                     case "ball1":
-                        inventory.numberOfBalls++;
+                        inventory.ballInventory[hit.collider.gameObject.transform.parent.gameObject.tag]++;
 
                         GameObject newBall2 = Instantiate(hit.collider.gameObject.transform.parent.gameObject);
+
+                        inventory.ballIndex = inventory.ballPrefabs.FindIndex(b => b.tag == hit.collider.gameObject.transform.parent.gameObject.tag);
 
                         carryBallScript.CarryBall(newBall2);
 

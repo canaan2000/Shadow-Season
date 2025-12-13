@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 4831561699137053037}
   - component: {fileID: 5888469910871623071}
   - component: {fileID: 6200751756165776507}
-  - component: {fileID: 1723957218372107819}
   - component: {fileID: 8416192351540418404}
   - component: {fileID: 1712471575058180382}
   - component: {fileID: 688624590237561577}
   - component: {fileID: 3390863764964979440}
+  - component: {fileID: 1665636932246770651}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -164,25 +164,6 @@ MonoBehaviour:
   playerCamera: {fileID: 6140682283597097447}
   speed: 5
   lookSpeed: 0.3
---- !u!114 &1723957218372107819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669348709964687846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d582f195e77ce15409bfae2cd4f1b755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  numberOfBalls: 0
-  ballprefabs:
-  - {fileID: 9207914354826968707, guid: 3baa5a5de57bd1740aa73e2d6c1b7143, type: 3}
-  - {fileID: 9207914354826968707, guid: 9dc9da583a4c8b744b401fec35dc82d1, type: 3}
-  - {fileID: 9207914354826968707, guid: 1cec9541193c8944ca8d3e76adcda0b3, type: 3}
-  currentBall: {fileID: 0}
-  ballIndex: 0
 --- !u!114 &8416192351540418404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +216,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDarknessCounter
   darkTillDeath: 15
   currentDark: 0
+--- !u!114 &1665636932246770651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669348709964687846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b426c67095a211b43951d3c27208ac60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryNew
+  ballPrefabs:
+  - {fileID: 9207914354826968707, guid: 3baa5a5de57bd1740aa73e2d6c1b7143, type: 3}
+  - {fileID: 9207914354826968707, guid: 9dc9da583a4c8b744b401fec35dc82d1, type: 3}
+  - {fileID: 9207914354826968707, guid: 1cec9541193c8944ca8d3e76adcda0b3, type: 3}
+  ballIndex: 0
+  currentBall: {fileID: 0}
 --- !u!1 &2358804099423518350
 GameObject:
   m_ObjectHideFlags: 0

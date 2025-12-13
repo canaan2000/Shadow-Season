@@ -73,7 +73,12 @@ public class Inventory : MonoBehaviour
             hasSwitched = false;
         }
 
-        currentBall = GetAvailableBalls()[ballIndex];
+        currentBall = ballprefabs[ballIndex];
+
+        if (!GetAvailableBalls().Contains(currentBall))
+        {
+            currentBall = null;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -90,7 +95,7 @@ public class Inventory : MonoBehaviour
 
             foreach (GameObject ball in ballprefabs)
             {
-                if (newBall.name.Contains(ball.name))
+                if (newBall.CompareTag(ball.tag))
                 {
                     matchingPrefab = ball;
                     break;
@@ -120,7 +125,7 @@ public class Inventory : MonoBehaviour
         }
         return availableBalls;
     }
-
+     
     private void Awake()
     {
         inputActions = new InputSystem_Actions();

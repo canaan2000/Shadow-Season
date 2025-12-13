@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class CarryBallScript : MonoBehaviour
 {
-    Inventory inventory;
+    InventoryNew inventory;
 
     public Transform carryPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventory = GetComponent<Inventory>();
+        inventory = GetComponent<InventoryNew>();
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class CarryBallScript : MonoBehaviour
     {
         GameObject matchingPrefab = null;
 
-        foreach (GameObject ball in inventory.ballprefabs)
+        foreach (GameObject ball in inventory.ballPrefabs)
         {
             if (inventory.currentBall != null && inventory.currentBall.name.Contains(ball.name))
             {
@@ -25,7 +25,7 @@ public class CarryBallScript : MonoBehaviour
             }
         }
 
-        if (inventory.ballInventory[matchingPrefab] <= 0)
+        if (inventory.ballInventory[matchingPrefab.tag] <= 0)
         {
             ChangeBall();
         }
@@ -42,18 +42,6 @@ public class CarryBallScript : MonoBehaviour
             ball.transform.rotation = carryPoint.rotation;
             ball.GetComponent<Rigidbody>().isKinematic = true;
             ball.GetComponent<Collider>().enabled = false;
-            switch (ball.tag)
-            {
-                case "Green Ball":
-                    inventory.ballIndex = 0;
-                    break;
-                case "Red Ball":
-                    inventory.ballIndex = 1;
-                    break;
-                case "Blue Ball":
-                    inventory.ballIndex = 2;
-                    break;
-            }
 
             inventory.currentBall = ball;
         }
