@@ -25,5 +25,10 @@ public class EmancipationGrid : MonoBehaviour
                 Debug.Log(ballType.tag + ", " + inventory.ballInventory[ballType.tag]);
             }
         }
+
+        if (other.gameObject.CompareTag("ball1"))
+        {
+            Destroy(other.gameObject.transform.parent.gameObject);
+        }
     }
 }
