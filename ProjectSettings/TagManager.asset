@@ -11,6 +11,7 @@ TagManager:
   - Green Ball
   - Patrol Point
   - Safe Zone
+  - BallSpawnPos
   layers:
   - Default
   - TransparentFX

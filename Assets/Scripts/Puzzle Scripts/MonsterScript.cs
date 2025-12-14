@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class MonsterScript : MonoBehaviour
 {
+    ResetBallsScript resetBallsScript;
+
     GameObject player;
     public float speed = 2.0f;
     public float detectionRange = 5.0f;
@@ -24,6 +26,8 @@ public class MonsterScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        resetBallsScript = FindAnyObjectByType<ResetBallsScript>();
+
         agent = GetComponent<NavMeshAgent>();
 
         player = GameObject.FindWithTag("Player");
@@ -70,7 +74,7 @@ public class MonsterScript : MonoBehaviour
         if (other.gameObject.CompareTag("ball1"))
         {
             StartCoroutine(Stun());
-            Destroy(other.gameObject.transform.parent.gameObject);
+            resetBallsScript.ResetBallToStartPos(other.gameObject.transform.parent.gameObject);
         }
     }
 

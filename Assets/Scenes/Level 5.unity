@@ -897,6 +897,18 @@ PrefabInstance:
       propertyPath: darkTillDeath
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 3472302810410411570, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472302810410411570, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472302810410411570, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4831561699137053037, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
       propertyPath: m_IsTrigger
       value: 0

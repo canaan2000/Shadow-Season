@@ -35,17 +35,21 @@ public class ThrowingScript : MonoBehaviour
             }
         }
 
-        if (throwInput && !hasThrown && inventory.ballInventory[matchingPrefab.tag] > 0)
-        {
-            GameObject newBall = Instantiate(matchingPrefab, transform.position + playerController.playerCamera.transform.forward * 1, Quaternion.identity);
-            newBall.GetComponent<Rigidbody>().AddForce(playerController.playerCamera.transform.forward * throwSpeed);
-            inventory.ballInventory[matchingPrefab.tag]--;
-            hasThrown = true;
+        if (inventory.currentBall != null)
+        { 
+            if (throwInput && !hasThrown && inventory.ballInventory[matchingPrefab.tag] > 0)
+            {
+                GameObject newBall = Instantiate(matchingPrefab, transform.position + playerController.playerCamera.transform.forward * 1, Quaternion.identity);
+                newBall.GetComponent<Rigidbody>().AddForce(playerController.playerCamera.transform.forward * throwSpeed);
+                inventory.ballInventory[matchingPrefab.tag]--;
+                hasThrown = true;
+            }
         }
         if (!throwInput && hasThrown)
         {
             hasThrown = false;
         }
+
     }
 
     private void Awake()

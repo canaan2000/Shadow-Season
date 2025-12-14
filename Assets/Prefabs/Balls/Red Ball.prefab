@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 8309347533025206769}
   - component: {fileID: 7150481908586914564}
   - component: {fileID: 4671467036163027078}
+  - component: {fileID: 1306641048068892608}
   m_Layer: 0
   m_Name: Red Ball
   m_TagString: Red Ball
@@ -382,6 +383,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1306641048068892608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207914354826968707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de084d27c46df445bcbdfff6236cd5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UniversalBallScript
 --- !u!1001 &1603003320179415087
 PrefabInstance:
   m_ObjectHideFlags: 0
