@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: light 1
+  m_Name: m_GreenBall
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -35,7 +35,7 @@ Material:
     RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: :m_LightmapFlags
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -130,9 +130,9 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.54905653, b: 0.54905653, a: 1}
-    - _Color: {r: 1, g: 0.5490566, b: 0.5490566, a: 1}
-    - _EmissionColor: {r: 23.666344, g: 4.4921293, b: 2.6020582, a: 1}
+    - _BaseColor: {r: 0.4584905, g: 1, b: 0.51112723, a: 1}
+    - _Color: {r: 0.4584905, g: 1, b: 0.5111272, a: 1}
+    - _EmissionColor: {r: 3.4572837, g: 23.666342, b: 2.5675755, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
