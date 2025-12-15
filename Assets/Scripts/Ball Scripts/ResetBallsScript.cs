@@ -34,6 +34,7 @@ public class ResetBallsScript : MonoBehaviour
 
     public void ResetBallToStartPos(GameObject ball)
     {
+        WaitForSeconds wait = new WaitForSeconds(1f);
         if (spawnPoses.Count > 0)
         {
             ball.transform.position = spawnPoses[spawnIndex % spawnPoses.Count];
