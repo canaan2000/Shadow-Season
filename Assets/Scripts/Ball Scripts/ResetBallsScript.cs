@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ResetBallsScript : MonoBehaviour
@@ -8,6 +9,8 @@ public class ResetBallsScript : MonoBehaviour
     public List<Vector3> spawnPoses = new List<Vector3>();
 
     int spawnIndex = 0;
+
+    public float resetDelay = 1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,15 +37,25 @@ public class ResetBallsScript : MonoBehaviour
 
     public void ResetBallToStartPos(GameObject ball)
     {
-        WaitForSeconds wait = new WaitForSeconds(1f);
+        StartCoroutine(BallResetTimer(ball));
+    }
+
+    System.Collections.IEnumerator BallResetTimer(GameObject ball)
+    {
+        ball.SetActive(false);
+
+        yield return new WaitForSeconds(resetDelay);
+
         if (spawnPoses.Count > 0)
         {
+            ball.SetActive(true);
             ball.transform.position = spawnPoses[spawnIndex % spawnPoses.Count];
             spawnIndex++;
             ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         }
         else
         {
+            ball.SetActive(true);
             ball.transform.position = startBallPoses[spawnIndex % startBallPoses.Count];
             spawnIndex++;
             ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
