@@ -32,6 +32,8 @@ public class MonsterScript : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
 
+        agent.speed = speed;
+
         if (patrolPoints.Length > 0)
         {
             agent.SetDestination(patrolPoints[currentPatrolIndex].position);

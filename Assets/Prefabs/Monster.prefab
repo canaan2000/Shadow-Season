@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46a5db4f042edb4ba60d7053ffbc826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterScript
-  speed: 5
+  speed: 5.25
   detectionRange: 5
   chaseRange: 10
   patrolPoints:
