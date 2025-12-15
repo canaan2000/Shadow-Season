@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305e7435da3458b4e87fea676b0a466e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetBallsScript
+  spawnPoses: []
+  resetDelay: 5
