@@ -1401,7 +1401,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1669348709964687846, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
       propertyPath: m_Name
-      value: Capsule
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1669348709964687846, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
       propertyPath: m_TagString

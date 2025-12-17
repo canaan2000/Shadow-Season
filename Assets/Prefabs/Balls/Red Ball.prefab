@@ -273,9 +273,9 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 2613050762119505339}
   - {fileID: 5459803696494008055}
   - {fileID: 5569845374465768564}
+  - {fileID: 2613050762119505339}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7930561716223947512
@@ -395,6 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de084d27c46df445bcbdfff6236cd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniversalBallScript
+  initialPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1603003320179415087
 PrefabInstance:
   m_ObjectHideFlags: 0

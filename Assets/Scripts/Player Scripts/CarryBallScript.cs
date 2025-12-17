@@ -40,6 +40,9 @@ public class CarryBallScript : MonoBehaviour
 
         if (ball != null)
         {
+            //destroy collision child object
+            Destroy(ball.transform.GetChild(0).gameObject);
+
             ball.transform.parent = carryPoint;
             ball.transform.position = carryPoint.position;
             ball.transform.rotation = carryPoint.rotation;

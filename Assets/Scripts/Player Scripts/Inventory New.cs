@@ -15,6 +15,7 @@ public class InventoryNew : MonoBehaviour
     public int ballIndex = 0;
 
     public GameObject currentBall;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -395,8 +395,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2561989668102120062, guid: 1c36c2f07977f5e40aa4724f8d6e2e72, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.2874217
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561989668102120062, guid: 1c36c2f07977f5e40aa4724f8d6e2e72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.451676
+      value: 11.87
       objectReference: {fileID: 0}
     - target: {fileID: 2561989668102120062, guid: 1c36c2f07977f5e40aa4724f8d6e2e72, type: 3}
       propertyPath: m_LocalPosition.y
@@ -720,7 +724,7 @@ Transform:
   m_GameObject: {fileID: 1816769804}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.16, y: 2.276, z: 7.17}
+  m_LocalPosition: {x: -2.1419592, y: -0.053622723, z: 7.136567}
   m_LocalScale: {x: 0.46254, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -813,6 +817,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6754674874353905211, guid: f5b2d22184f5baf40b7b0731b38246b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f5b2d22184f5baf40b7b0731b38246b7, type: 3}
       propertyPath: m_Name
       value: Level1Greybox
@@ -841,7 +849,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1669348709964687846, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
       propertyPath: m_Name
-      value: Capsule
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1669348709964687846, guid: 95455a90e72546f4db585a04964f1c91, type: 3}
       propertyPath: m_TagString
