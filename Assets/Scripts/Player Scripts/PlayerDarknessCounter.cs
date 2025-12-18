@@ -17,7 +17,7 @@ public class PlayerDarknessCounter : MonoBehaviour
 
         if (currentDark >= darkTillDeath)
         {
-            Destroy(gameObject);
+            GetComponent<PlayerController>().Die();
             Debug.Log("Player has died from darkness.");
         }
     }
