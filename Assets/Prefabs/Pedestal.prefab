@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6405297574276590020}
   - component: {fileID: 5269406918057747049}
   - component: {fileID: 2183563292969462394}
+  - component: {fileID: 8238530878046646031}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -44,7 +45,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -127,6 +128,30 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &8238530878046646031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178191092186883556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b7eb2c447af374d97d5d0e6294d040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashScript
+  minWaitBetweenBursts: 1
+  maxWaitBetweenBursts: 7
+  minBurstDuration: 0.1
+  maxBurstDuration: 0.5
+  blackoutChance: 0.3
+  minBlackoutTime: 0.05
+  maxBlackoutTime: 0.2
+  minIntensity: 0.2
+  maxIntensity: 2
+  minFlickerStep: 0.02
+  maxFlickerStep: 0.08
+  baseIntensity: 0
 --- !u!1 &195899979502574041
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +163,7 @@ GameObject:
   - component: {fileID: 8343773001846148729}
   - component: {fileID: 4057091526178486014}
   - component: {fileID: 5492002246747973131}
+  - component: {fileID: 88147565562005569}
   m_Layer: 0
   m_Name: Spot Light (3)
   m_TagString: Untagged
@@ -171,7 +197,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -254,6 +280,30 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &88147565562005569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195899979502574041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b7eb2c447af374d97d5d0e6294d040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashScript
+  minWaitBetweenBursts: 1
+  maxWaitBetweenBursts: 7
+  minBurstDuration: 0.1
+  maxBurstDuration: 0.5
+  blackoutChance: 0.3
+  minBlackoutTime: 0.05
+  maxBlackoutTime: 0.2
+  minIntensity: 0.2
+  maxIntensity: 2
+  minFlickerStep: 0.02
+  maxFlickerStep: 0.08
+  baseIntensity: 0
 --- !u!1 &375018338015986391
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +315,7 @@ GameObject:
   - component: {fileID: 2458598206076678614}
   - component: {fileID: 7612957942934731504}
   - component: {fileID: 2433501579274280804}
+  - component: {fileID: 7501782919728781059}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -298,7 +349,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -381,6 +432,30 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &7501782919728781059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375018338015986391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b7eb2c447af374d97d5d0e6294d040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashScript
+  minWaitBetweenBursts: 1
+  maxWaitBetweenBursts: 7
+  minBurstDuration: 0.1
+  maxBurstDuration: 0.5
+  blackoutChance: 0.3
+  minBlackoutTime: 0.05
+  maxBlackoutTime: 0.2
+  minIntensity: 0.2
+  maxIntensity: 2
+  minFlickerStep: 0.02
+  maxFlickerStep: 0.08
+  baseIntensity: 0
 --- !u!1 &749102009985299979
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +467,7 @@ GameObject:
   - component: {fileID: 3822448573080980630}
   - component: {fileID: 4230947886738011612}
   - component: {fileID: 7631687376164718316}
+  - component: {fileID: 3233284195490335375}
   m_Layer: 0
   m_Name: Spot Light (2)
   m_TagString: Untagged
@@ -425,7 +501,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -508,6 +584,30 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &3233284195490335375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749102009985299979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b7eb2c447af374d97d5d0e6294d040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashScript
+  minWaitBetweenBursts: 1
+  maxWaitBetweenBursts: 7
+  minBurstDuration: 0.1
+  maxBurstDuration: 0.5
+  blackoutChance: 0.3
+  minBlackoutTime: 0.05
+  maxBlackoutTime: 0.2
+  minIntensity: 0.2
+  maxIntensity: 2
+  minFlickerStep: 0.02
+  maxFlickerStep: 0.08
+  baseIntensity: 0
 --- !u!1 &8497670165457995140
 GameObject:
   m_ObjectHideFlags: 0

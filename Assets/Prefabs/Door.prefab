@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7956675724216582312}
   - component: {fileID: 6433902287069193125}
   - component: {fileID: 350603330175858156}
+  - component: {fileID: 5016161870252968217}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -44,7 +45,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 90
   m_InnerSpotAngle: 20
@@ -127,6 +128,30 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &5016161870252968217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402503779541414287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b7eb2c447af374d97d5d0e6294d040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashScript
+  minWaitBetweenBursts: 1
+  maxWaitBetweenBursts: 7
+  minBurstDuration: 0.1
+  maxBurstDuration: 0.5
+  blackoutChance: 0.3
+  minBlackoutTime: 0.05
+  maxBlackoutTime: 0.2
+  minIntensity: 0.2
+  maxIntensity: 2
+  minFlickerStep: 0.02
+  maxFlickerStep: 0.08
+  baseIntensity: 0
 --- !u!1 &5794180850994177627
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +163,7 @@ GameObject:
   - component: {fileID: 6006266256146691740}
   - component: {fileID: 8682453019466446447}
   - component: {fileID: 276845520251860600}
+  - component: {fileID: 3691852000937575601}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -171,7 +197,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 90
   m_InnerSpotAngle: 20
@@ -254,6 +280,30 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &3691852000937575601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5794180850994177627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b7eb2c447af374d97d5d0e6294d040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashScript
+  minWaitBetweenBursts: 1
+  maxWaitBetweenBursts: 7
+  minBurstDuration: 0.1
+  maxBurstDuration: 0.5
+  blackoutChance: 0.3
+  minBlackoutTime: 0.05
+  maxBlackoutTime: 0.2
+  minIntensity: 0.2
+  maxIntensity: 2
+  minFlickerStep: 0.02
+  maxFlickerStep: 0.08
+  baseIntensity: 0
 --- !u!1 &6354551143428045834
 GameObject:
   m_ObjectHideFlags: 0
