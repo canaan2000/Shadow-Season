@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
