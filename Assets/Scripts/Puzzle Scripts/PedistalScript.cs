@@ -9,6 +9,8 @@ public class PedistalScript : MonoBehaviour
     public Transform heldBallPos;
     public bool isActivated = false;
 
+    public GameObject pedestalModel;
+
     public Color pedestalColor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +18,7 @@ public class PedistalScript : MonoBehaviour
         pedestalColor = requiredBall.GetComponent<Renderer>().sharedMaterial.color;
 
         this.gameObject.GetComponent<Renderer>().material.color = pedestalColor;
+        pedestalModel.GetComponent<Renderer>().material.color = pedestalColor;
     }
 
     // Update is called once per frame
